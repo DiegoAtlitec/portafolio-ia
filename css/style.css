@@ -1,0 +1,179 @@
+/* --- VARIABLES --- */
+:root {
+    --bg-dark: #0a0a0c;
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --accent: #6366f1; /* Indigo IA */
+    --text-main: #f8fafc;
+    --text-dim: #94a3b8; /* Gris más brillante para mayor contraste */
+}
+
+/* --- ESTILOS BASE --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Fondo con manchas de color (Blobs) */
+.blob-bg {
+    position: fixed;
+    top: -10%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+    filter: blur(80px);
+    z-index: -1;
+}
+
+/* =========================================
+   --- 1. ARREGLO DEL MENÚ DE NAVEGACIÓN ---
+   ========================================= */
+.glass-nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+    padding: 1.2rem 2rem; /* Más espaciado vertical */
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+    letter-spacing: 1px;
+}
+
+/* Contenedor de la lista del menú */
+.glass-nav ul {
+    display: flex; /* CAMBIO CLAVE: Menú horizontal */
+    list-style: none; /* Quita viñetas */
+    gap: 30px; /* Espaciado profesional entre elementos */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo de los enlaces del menú */
+.glass-nav a {
+    text-decoration: none; /* Quita subrayados */
+    color: var(--text-dim); /* Base color más brillante */
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espaciado para el icono */
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Iconos del menú */
+.glass-nav a .lucide {
+    color: var(--accent);
+}
+
+/* Efecto hover del menú */
+.glass-nav a:hover {
+    color: var(--text-main);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* ==========================================
+   --- 2. ARREGLO DEL BOTÓN DE EXPLORAR ---
+   ========================================== */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.reveal-text {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.reveal-sub {
+    font-size: 1.2rem;
+    color: var(--text-dim);
+    margin-bottom: 2rem;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 15px;
+    margin-top: 1rem;
+}
+
+/* Estilo del botón principal */
+.btn-primary {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--accent); /* Fondo de color de acento */
+    color: var(--text-main);
+    text-decoration: none; /* Quita subrayado */
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+/* Efecto hover del botón */
+.btn-primary:hover {
+    background-color: transparent; /* Fondo transparente */
+    border-color: var(--accent); /* Borde de color de acento */
+    color: var(--accent); /* Texto de color de acento */
+    transform: scale(1.05); /* Efecto de crecimiento sutil */
+}
+
+/* --- OTROS ESTILOS EXISTENTES --- */
+.highlight {
+    color: var(--accent);
+    text-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 4rem 10%;
+}
+
+.glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.glass:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+}
+
+.project-content { padding: 2rem; }
+.tags span {
+    font-size: 0.7rem;
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--accent);
+    padding: 4px 12px;
+    border-radius: 50px;
+    margin-right: 5px;
+}

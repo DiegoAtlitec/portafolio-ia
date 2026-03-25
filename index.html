@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Engineering Portfolio</title>
+    <title>Diego Atlitec | AI Engineering Portfolio</title>
 
     <link rel="icon" type="image/webp" href="assets/img/d.webp">
+    <meta name="description" content="Portafolio de Ingeniería en Inteligencia Artificial - Especialista en Deep Learning y Algoritmos">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
@@ -17,91 +22,166 @@
     <div class="blob-bg"></div>
     
     <nav class="glass-nav">
-        <div class="logo">Diego Atlitec/IA</div>
+        <div class="logo">Diego Atlitec<span>/IA</span></div>
         <ul>
             <li><a href="#hero">Inicio</a></li>
             <li><a href="#projects">Proyectos</a></li>
+            <li><a href="#skills">Stack</a></li>
             <li><a href="#experience">Experiencia</a></li>
         </ul>
     </nav>
 
-    <header id="hero" class="hero-section">
-        <h1 class="reveal-text">Ingeniería en <span class="highlight">Inteligencia Artificial</span></h1>
-        <p class="reveal-sub">ESCOM | Especialista en Algoritmos y Deep Learning</p>
-        <div class="hero-btns">
-            <a href="#projects" class="btn-primary glowing">Explorar Trabajo</a>
-        </div>
-    </header>
+    <main>
+        <header id="hero" class="hero-section">
+            <h1 class="reveal-text">Ingeniería en <span class="highlight">Inteligencia Artificial</span></h1>
+            <p class="reveal-sub">ESCOM | Especialista en Algoritmos y Deep Learning</p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn-primary glowing">Explorar Trabajo</a>
+                <a href="mailto:diego@atlitec.com" class="btn-secondary">Contactar</a>
+            </div>
+        </header>
 
-    <section id="projects" class="section">
-        <h2 class="section-title">Arquitectura y Modelos</h2>
-        <div class="project-grid">
+        <section id="projects" class="section">
+            <h2 class="section-title">Arquitectura y Modelos</h2>
+            <div class="project-grid">
+                
+                <article class="project-card glass floating">
+                    <div class="project-content">
+                        <h3>Infraestructura Cloud & BD</h3>
+                        <p>Configuración y despliegue de Máquinas Virtuales y bases de datos MySQL utilizando el ecosistema de Microsoft Azure.</p>
+                        <div class="tags"><span>Azure</span><span>MySQL</span><span>Cloud</span></div>
+                    </div>
+                </article>
+
+                <article class="project-card glass floating" style="animation-delay: 0.2s;">
+                    <div class="project-content">
+                        <h3>Redes Neuronales</h3>
+                        <p>Implementación de arquitecturas de Deep Learning para la resolución de problemas complejos y procesamiento de datos.</p>
+                        <div class="tags"><span>Deep Learning</span><span>Python</span><span>Keras</span></div>
+                    </div>
+                </article>
+
+                <article class="project-card glass floating" style="animation-delay: 0.4s;">
+                    <div class="project-content">
+                        <h3>Algoritmos Bioinspirados</h3>
+                        <p>Desarrollo de un sistema de compresión de imágenes basado en el algoritmo de optimización Artificial Bee Colony.</p>
+                        <div class="tags"><span>C++</span><span>Optimización</span></div>
+                    </div>
+                </article>
+
+                <article class="project-card glass floating" style="animation-delay: 0.6s;">
+                    <div class="project-content">
+                        <h3>Teoría Computacional</h3>
+                        <p>Programación de una Máquina de Turing Universal, demostrando fundamentos matemáticos y lógica de autómatas.</p>
+                        <div class="tags"><span>C++</span><span>Matemáticas</span></div>
+                    </div>
+                </article>
+
+                <article class="project-card glass floating" style="animation-delay: 0.8s;">
+                    <div class="project-content">
+                        <h3>Modelos Predictivos</h3>
+                        <p>Investigación y desarrollo de modelos basados en Support Vector Machines (SVM) para clasificación de datos.</p>
+                        <div class="tags"><span>Machine Learning</span><span>SVM</span></div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <h2 class="section-title">Stack Tecnológico</h2>
             
-            <div class="project-card glass floating">
-                <div class="project-content">
-                    <h3>Infraestructura Cloud & BD</h3>
-                    <p>Configuración y despliegue de Máquinas Virtuales y bases de datos MySQL utilizando el ecosistema de Microsoft Azure.</p>
-                    <div class="tags"><span>Azure</span><span>MySQL</span><span>Cloud</span></div>
+            <div id="skills-orbit" class="orbit-container glass">
+                
+                <div class="orbit-item" data-orbit="left">
+                    <div class="category-header">
+                        <i data-lucide="brain-circuit"></i>
+                        <h3>Inteligencia Artificial</h3>
+                    </div>
+                    <div class="tags-orbit" id="cat-ai">
+                        
+                        <span class="slot-chip">Deep Learning</span>
+                        <span class="slot-chip">Python</span>
+                        <span class="slot-chip">Neural Networks</span>
+                        <span class="slot-chip">TensorFlow</span>
+                        <span class="slot-chip">Keras</span>
+                    </div>
                 </div>
-            </div>
+                
+                <div class="orbit-item" data-orbit="right">
+                    <div class="category-header">
+                        <i data-lucide="code-2"></i>
+                        <h3>Desarrollo & Lenguajes</h3>
+                    </div>
+                    <div class="tags-orbit" id="cat-dev">
+                        <span class="slot-chip">C++</span>
+                        <span class="slot-chip">C</span>
+                        <span class="slot-chip">Java</span>
+                        <span class="slot-chip">Swift</span>
+                        <span class="slot-chip">JavaScript</span>
+                        <span class="slot-chip">React</span>
+                        <span class="slot-chip">Haskell</span>
+                    </div>
+                </div>
 
-            <div class="project-card glass floating" style="animation-delay: 0.2s;">
-                <div class="project-content">
-                    <h3>Redes Neuronales</h3>
-                    <p>Implementación de arquitecturas de Deep Learning para la resolución de problemas complejos y procesamiento de datos.</p>
-                    <div class="tags"><span>Deep Learning</span><span>Python</span></div>
+                <div class="orbit-item" data-orbit="left">
+                    <div class="category-header">
+                        <i data-lucide="database"></i>
+                        <h3>Datos & Cloud</h3>
+                    </div>
+                    <div class="tags-orbit" id="cat-data">
+                        <span class="slot-chip">SQL Server</span>
+                        <span class="slot-chip">MySQL</span>
+                        <span class="slot-chip">Oracle</span>
+                        <span class="slot-chip">Azure</span>
+                        <span class="slot-chip">Linux</span>
+                        <span class="slot-chip">SQL</span>
+                    </div>
                 </div>
-            </div>
 
-            <div class="project-card glass floating" style="animation-delay: 0.4s;">
-                <div class="project-content">
-                    <h3>Algoritmos Bioinspirados</h3>
-                    <p>Desarrollo de un sistema de compresión de imágenes basado en el algoritmo de optimización Artificial Bee Colony.</p>
-                    <div class="tags"><span>C++</span><span>Optimización</span></div>
+                <div class="orbit-item" data-orbit="right">
+                    <div class="category-header">
+                        <i data-lucide="terminal"></i>
+                        <h3>Metodologías</h3>
+                    </div>
+                    <div class="tags-orbit" id="cat-met">
+                        <span>Scrum</span><span>Git / GitHub</span><span>Agile</span>
+                    </div>
                 </div>
-            </div>
 
-            <div class="project-card glass floating" style="animation-delay: 0.6s;">
-                <div class="project-content">
-                    <h3>Teoría Computacional</h3>
-                    <p>Programación de una Máquina de Turing Universal, demostrando fundamentos matemáticos y lógica de autómatas.</p>
-                    <div class="tags"><span>C++</span><span>Matemáticas</span></div>
-                </div>
             </div>
+        </section>
 
-            <div class="project-card glass floating" style="animation-delay: 0.8s;">
-                <div class="project-content">
-                    <h3>Modelos Predictivos</h3>
-                    <p>Investigación y desarrollo de modelos basados en Support Vector Machines (SVM) para clasificación de datos.</p>
-                    <div class="tags"><span>Machine Learning</span><span>SVM</span></div>
-                </div>
+        <section id="experience" class="section">
+            <h2 class="section-title">Experiencia y Liderazgo</h2>
+            <div class="project-grid">
+                <article class="project-card glass">
+                    <div class="project-content">
+                        <h3>Coach Financiero | Proyecto BBVA</h3>
+                        <p>Desarrollo de planes estratégicos e impartición de educación financiera adaptada a audiencias objetivo.</p>
+                    </div>
+                </article>
+                <article class="project-card glass">
+                    <div class="project-content">
+                        <h3>Servicio Social | Grupo Salinas</h3>
+                        <p>Colaboración en proyectos tecnológicos y de análisis dentro de un entorno corporativo de alto impacto.</p>
+                    </div>
+                </article>
             </div>
+        </section>
+    </main>
 
-        </div>
-    </section>
-
-    <section id="experience" class="section">
-        <h2 class="section-title">Experiencia y Liderazgo</h2>
-        <div class="project-grid">
-            <div class="project-card glass">
-                <div class="project-content">
-                    <h3>Coach Financiero | Proyecto BBVA</h3>
-                    <p>Desarrollo de planes estratégicos e impartición de educación financiera adaptada a audiencias objetivo, combinando habilidades analíticas con comunicación efectiva.</p>
-                </div>
-            </div>
-            <div class="project-card glass">
-                <div class="project-content">
-                    <h3>Servicio Social | Grupo Salinas</h3>
-                    <p>Colaboración en proyectos tecnológicos y de análisis dentro de un entorno corporativo de alto impacto.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <footer class="glass-footer">
+        <p>© 2026 Diego Atlitec | <a href="mailto:diego@atlitec.com">diego@atlitec.com</a></p>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/main.js"></script>
-    <script>lucide.createIcons();</script>
+    <script>
+        // Inicializar iconos de Lucide
+        lucide.createIcons();
+    </script>
 </body>
 </html>

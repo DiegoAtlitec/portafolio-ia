@@ -1,7 +1,12 @@
-/* Efecto de flotación continua para las tarjetas */
+/* =========================================
+   ANIMATIONS.CSS - Diego Atlitec
+   Efectos de micro-interacción y bucles
+   ========================================= */
+
+/* 1. FLOTACIÓN CONTINUA (Para tarjetas de proyectos) */
 @keyframes float {
     0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
+    50% { transform: translateY(-12px); }
     100% { transform: translateY(0px); }
 }
 
@@ -9,34 +14,58 @@
     animation: float 6s ease-in-out infinite;
 }
 
-/* Efecto de pulso luminoso para botones o elementos clave */
+/* 2. PULSO LUMINOSO (Para el botón principal y estados activos) */
 @keyframes pulse-glow {
-    0% { box-shadow: 0 0 10px rgba(99, 102, 241, 0.2); }
-    50% { box-shadow: 0 0 25px rgba(99, 102, 241, 0.6); }
-    100% { box-shadow: 0 0 10px rgba(99, 102, 241, 0.2); }
+    0% { 
+        box-shadow: 0 0 10px rgba(var(--accent-rgb), 0.2); 
+        transform: scale(1);
+    }
+    50% { 
+        box-shadow: 0 0 25px rgba(var(--accent-rgb), 0.5); 
+        transform: scale(1.02);
+    }
+    100% { 
+        box-shadow: 0 0 10px rgba(var(--accent-rgb), 0.2); 
+        transform: scale(1);
+    }
 }
 
 .glowing {
-    animation: pulse-glow 3s infinite;
-    transition: all 0.3s ease;
+    animation: pulse-glow 4s infinite ease-in-out;
 }
 
-.glowing:hover {
-    background: var(--accent);
-    color: white;
-    transform: scale(1.05);
+/* 3. PARPADEO DE NODOS (Para los chips del stack tecnológico) */
+@keyframes tag-pulse {
+    0%, 100% { 
+        opacity: 0.8; 
+        box-shadow: 0 0 5px rgba(var(--accent-rgb), 0.2); 
+    }
+    50% { 
+        opacity: 1; 
+        box-shadow: 0 0 15px rgba(var(--accent-rgb), 0.4); 
+    }
 }
 
-/* Ajustes adicionales para espaciado de secciones */
-.section {
-    padding: 100px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+/* 4. ENTRADA TIPO SLOT (Para los chips individuales) */
+@keyframes slotIn {
+    0% { 
+        transform: translateY(30px) scale(0.8); 
+        opacity: 0; 
+    }
+    100% { 
+        transform: translateY(0) scale(1); 
+        opacity: 1; 
+    }
 }
 
-.section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: var(--text-main);
+/* 5. REVELACIÓN DE TEXTO (Hero) */
+@keyframes revealUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
